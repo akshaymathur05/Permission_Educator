@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Permission-Educator</string>
+    <string name="mapPerm">Permission-Educator</string>
+
+    <string-array name="System_App_List">
+        <item> Maps </item>
+        <item> Youtube </item>
+        <item> Chrome </item>
+        <item> Popup Calculator </item>
+        <item> myFiles </item>
+        <item> ListApplications </item>
+        <item> Google Docs </item>
+    </string-array>
+
+    <string-array name="Store_App_List">
+        <item> Snapchat </item>
+        <item> Pandora </item>
+        <item> Twitter </item>
+    </string-array>
+</resources>
