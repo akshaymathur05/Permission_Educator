@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{
+  background: white;
+}
+form{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -250px;
+  width: 500px;
+  height: 200px;
+  border: 4px dashed #16a085;
+}
+form p{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 170px;
+  color: black;
+  font-family: Arial;
+}
+form input{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+}
+form button{
+  margin: 0;
+  color: #fff;
+  background: #16a085;
+  border: none;
+  width: 508px;
+  height: 35px;
+  margin-top: -20px;
+  margin-left: -4px;
+  border-radius: 4px;
+  border-bottom: 4px solid #117A60;
+  transition: all .2s ease;
+  outline: none;
+}
+form button:hover{
+  background: #149174;
+	color: #0C5645;
+}
+form button:active{
+  border:0;
+}
+
+.container{
+  height: 50%;
+  border: 4px dashed #16a085;
+  margin: auto;
+  width: fit-content;
+  width: -webkit-fit-content; 
+  width: -moz-fit-content;
+  text-align: center;
+}
+h1{
+padding: 20px;
+}
+
+</style>
+<title>Permission Educator</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome to Permission Educator!</h1>
+</div>
+
+<form action="http://www.permissioneducator.net:5000/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <p>Drag your apk file here or click in this area to upload it.</p>
+  <button type="submit">Upload</button>
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('form input').change(function () {
+    $('form p').text(this.files.length + " file(s) selected");
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+
+

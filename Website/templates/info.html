@@ -1,0 +1,43 @@
+
+
+<head>
+<link rel="stylesheet" href="static/css/style.css">
+<title>Permission Educator</title>
+</head>
+
+{% extends 'base.html' %}
+
+<div class="container">
+{% block content %}
+    <h1>{% block title %} {{ features['name'] }} {% endblock %}</h1>
+            
+            <hr>
+            <h2>Permissions:</h2>
+            <table>
+            <tr>
+                <th id="header"><h5>Name<h5></th>
+                <th id="header"><h5>About<h5></th>
+                <th id="header"><h5>Category<h5></th>
+            </tr>
+            {% for perm in features['perms'] %}
+            
+            <tr>
+                <td> {{ perm }} </td> 
+                <td> {{ features['info'][loop.index0] }} </td>
+                <td> {{ features['category'][loop.index0] }} </td>
+            </tr>
+            
+            {% endfor %}
+            </table>
+            
+            <table>
+            <tr>
+                <td><h3>Classification: </h3></td>
+                <td><h3>{{ features['class'] }}</h3></td>
+            </tr>
+            
+           
+</div>
+
+{% endblock %}
+
